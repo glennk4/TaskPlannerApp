@@ -2,5 +2,15 @@
     <string name="app_name">Task Planner App</string>
     <string name="portraitText">Portrait</string>
     <string name ="landscapeText">Landscape</string>
-    <string name = "addTaskBtn">Add Task</string>
+    <string name = "addTaskBtn">Add New Task</string>
+    <string name= "addNewTask">Add New Task</string>
+    <string name = "defaultText">Default Text</string>
+    <string name = "completeTask">Complete Task</string>
+    <string name = "editTask">Edit Task</string>
+    <string name = "deleteTask">Delete Task</string>
+    <string name = "taskDueBy">Task due by: </string>
+    <string name = "saveNewTask">Save New Task</string>
+    <string name = "selectDate">Select Date</string>
+    <string name = "addDescription">Add title description here</string>
+    <string name = "addTitle">Add title here"</string>
 </resources>

@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="fontForHomePage">
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:padding">2dip</item>
+    </style>
+
+</resources>

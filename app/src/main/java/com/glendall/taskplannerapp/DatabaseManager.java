@@ -1,23 +1,22 @@
 package com.glendall.taskplannerapp;
-
 /*
     Establishes SQL Connection
  */
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import  android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import androidx.annotation.Nullable;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class DatabaseManager extends SQLiteOpenHelper
 {
     public static final String DATABASE_NAME = "ToDo.db";
     public static final String TABLE_NAME  = "task_table";
-    public static final String COL_1 = "ID" ;
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "DESCRIPTION";
     public static final String COL_4 = "DUE";
@@ -52,26 +51,19 @@ public class DatabaseManager extends SQLiteOpenHelper
 
         long result = db.insert(TABLE_NAME, null, contentValues);
 
-        if (result == -1) {
-            return false;
-        } else {
-            return true;
-        }
+        return result != -1;
     }
 
     public Cursor GetAllData()
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor result = db.rawQuery("SELECT * FROM "+TABLE_NAME+" ORDER BY due",null);
-        return result;
+        return db.rawQuery("SELECT * FROM "+TABLE_NAME+" ORDER BY due",null);
     }
 
     public Cursor GetTaskData(int taskId)
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor result = db.rawQuery("SELECT * FROM "+TABLE_NAME+" WHERE ID=="+taskId,null);
-
-        return result;
+        return db.rawQuery("SELECT * FROM "+TABLE_NAME+" WHERE ID=="+taskId,null);
     }
 
     public  boolean UpdateData(String name, String description, String due, Boolean completed, String done_date )
@@ -86,48 +78,30 @@ public class DatabaseManager extends SQLiteOpenHelper
 
         long result = db.insert(TABLE_NAME,null, contentValues);
 
-        if(result == -1)
-        {
-            return false;
-        }
-        else
-        {
-            return  true;
-        }
+        return result != -1;
     }
 
     public boolean DeleteTask(int taskId)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME,"ID=="+taskId, null);
-        if (result == -1)
-        {
-            return  false;
-        }
-        else
-        {
-            return true;
-        }
+
+        return result != -1;
     }
 
     public boolean CompleteTask(int taskId)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
+        //SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault().format);
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         contentValues.put(COL_5,1);
+        contentValues.put(COL_6,date.toString());
         long result = db.update(TABLE_NAME,contentValues,"ID=="+taskId,null);
-
-        if(result == -1)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        return result != -1;
     }
 
-    public boolean EditTask(int  name, String description,String due, int taskId)
+    public boolean EditTask(String name, String description, String due, int taskId)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -136,13 +110,6 @@ public class DatabaseManager extends SQLiteOpenHelper
         contentValues.put(COL_4,due);
         long result = db.update(TABLE_NAME, contentValues,"ID=="+taskId,null);
 
-        if(result ==-1)
-        {
-            return false;
-        }
-        else
-        {
-            return  true;
-        }
+        return result != -1;
     }
 }

@@ -5,11 +5,16 @@
       <map>
         <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/drawable/border.xml" value="0.3665" />
         <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/drawable/borderedbutton.xml" value="0.1725" />
+        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/drawable/rounded_background.xml" value="0.196" />
+        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/drawable/roundedbackground.xml" value="0.196" />
         <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/drawable/textview_border.xml" value="0.3665" />
-        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout-land/activity_main.xml" value="0.1591710758377425" />
+        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout-land/activity_main.xml" value="0.31040564373897706" />
         <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout-land/addtasklayout.xml" value="0.31040564373897706" />
-        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout-land/viewtasklayout.xml" value="0.31040564373897706" />
+        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout/addtasklayout.xml" value="0.22" />
+        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout/roundedbackground.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Glenn/AndroidStudioProjects/TaskPlannerApp/app/src/main/res/layout/viewtasklayout.xml" value="0.321285140562249" />
       </map>
     </option>
   </component>
